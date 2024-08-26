@@ -1,0 +1,18 @@
+Milestone 2: More Movement and Missiles (50 points)
+Functionality required to earn a 100% for M2
+- M1 Items 1 – 8 (above) 
+1. (30%) Automatic movement/animation (things moving without keys pressed)
+	The hero must fall when the jetpack turns off (and stop falling when he lands on the ground)
+	The fall must be gradual, not instantaneous
+	This movement/animation occurs without key presses
+2. (25%) Two different kinds of missiles that move in a reasonable way are required 
+	(25% for having two different kinds of enemy movements)
+3. [I DONT THINK THIS IS NEEDED FOR OUR IMPLEMENTATION ] (25% ) Diagonal movement by the hero is required
+	Flying diagonal movement – up arrow key (or space bar) combined with auto horizontal movement
+	Falling diagonal movement – automatic falling with combined with auto horizontal movement
+4. (10%) One missile that can track the hero (i.e., adjust its vertical position toward the hero’s)
+5. (10%) Fully complete the Milestone 2 Report and Submit it via Gradescope
+
+Warning: Not submitting the Milestone Report will result in a 0% on the Milestone
+Your commit message says: “This is the Milestone M2 commit and is ready for grading”
+Begin planning for how your implementation will handle basic collisions (e.g., missile hits hero and hero loses a life) but this will not be checked until the next milestone

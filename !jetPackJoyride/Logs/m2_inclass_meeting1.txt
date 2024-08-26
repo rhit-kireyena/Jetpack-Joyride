@@ -1,0 +1,12 @@
+meet tuesday 7:30pm
+notes from meeting with TA:
+-hero should reset when switching between levels
+* alternatively, seamless transition between levels (keeping position) should have safezone at the beginning of the level
+
+-discuss feedback from meeting over the weekend
+
+discussion on how collisions are handled:
+
+-collisions are handled by each object detecting collision with the Hero
+- A function in NonPlayerObject is overriden in each of the inherited classes to detect when collision occurs and preform proper functions when it is. this function is called as part of regularly updating the class.
+* This function tells the Hero through a series of overloaded functions to do things if they are colliding with the Hero

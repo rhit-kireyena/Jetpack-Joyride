@@ -1,0 +1,124 @@
+@startuml
+class MainApp{
+-currentLevel: int
+frame: JFrame
+level: Level
+-runApp(): void
++getFilesInDirectory(path): void
++switchLevels(changeAmount): void
++restartLevel(): void
+}
+
+class Level {
+-defaultFile: boolean
++loadFile(file): void
++getLevelFromFile(file): void
++defaultLevel(file): void
++isDefaultLevel(): boolean
+-loadFileFromKeywords(file): void
+-parseKeyword(line, keyword, lineNumber)
+-getParamsFromString(string, lineNumber): ArrayList<String>
+-coinGrid(x, y, rows, columns)
+-loadFileFromDiagram(file): void
++paintComponent(g): void
++update(): void
+}
+
+class GameOverScreen{
++paintComponent()
+}
+
+abstract Barrier {
+#rotation: double
+#width: int
+#height: int
+#barrierColor: Color;
++drawOn(g2)
+#setRotation(angle)
+}
+
+abstract Missiles {
+#width: int
+#height: int
+#speed: int
+#ySpeed: int
+#xSpeed: int
+#rotation: double
+#xArray: int[]
+#yArray: int[]
+#missileColor: Color;
++drawOn(g2): void
++isAbove(hero): boolean
+}
+
+
+class Hero{
+-distanceTraveled: int
+-coinsCollected: int
+-health: int
+-point: int[]
+-speedY: int
+-speedX: int
++loseLife(damage): void
++drawOn(g2):void
++moveVertical(): void
++moveVertical(dy): void
++update(g2): void
+-applyGravity(): void
++resetPosition(): void
++collideWith(eBarrier ElectricBarrier): void
++collideWith(rBarrier RegularBarrier): void
++collideWith(coin Coin): void
++collideWith(missile Missile): void /' should only need 1 since what happens when they collide is the same for both missiles'/
+}
+class InvalidFormatLevelException {
+}
+class ElectricBarrier {
+}
+class RegularBarrier {
+}
+class HeatSeekingMissile{
+setRoation(hero: Hero)
+}
+class RegularMissile{
+}
+class Coin{
++drawCoin(): void
++collidesWith(hero): boolean
+}
+
+class InputListener{
++keyTyped(event): void
++keyPressed(event): void
++keyReleased(event): void
+}
+
+abstract NonPlayerObject{
+point: int[]
++update(horizontalSpeed): void
++update(int horizontalSpeed, int verticalSpeed, boolean isAbove): void
+#collidesWith(hero: Hero): void
+
+}
+
+MainApp -down->"1" Level
+MainApp -left-> GameOverScreen
+Level -left->"*" NonPlayerObject
+Level -left->"1" Hero
+Level .down.> InvalidFormatLevelException
+ElectricBarrier -up-|> Barrier
+RegularBarrier -up-|> Barrier
+MainApp -down->"1" Hero
+InputListener -up-> Hero
+InputListener -up-> Level
+Missiles -> Hero
+Barrier -up-|> NonPlayerObject
+Coin -up-|> NonPlayerObject
+Missiles -up-|> NonPlayerObject
+HeatSeekingMissile -up-|> Missiles
+RegularMissile -up-|> Missiles
+HeatSeekingMissile -up-> Hero
+
+
+NonPlayerObject -right-> Hero
+@enduml

@@ -1,0 +1,48 @@
+@startuml
+class GameManager{
++getFile()
++switchLevel()
+}
+
+class Level {
+difficultyLevel: int
++getLevel()
+-handleDrawings()
+}
+
+abstract Barrier {
++points: int[][]
++drawBarrier()
+}
+class Hero{
+-distanceTraveled: int
+-coinsCollected: int
+-health: int
++FlyUp(): void
++loseLife(damage): void
++drawHero()
+}
+class InvalidFormatLevelException {
++printError(): void
+}
+class ElectricBarrier {
+-damage: int
++getDamage(): int
+}
+class RegularBarrier {
+}
+
+class Coin{
++point:int[]
++drawCoin(): void
+}
+
+GameManager -down->"*" Level
+Level ->"*" Barrier
+Level -down->"1" Hero
+Level ..left..> InvalidFormatLevelException
+Level -down->"*" Coin
+ElectricBarrier -left-|> Barrier
+RegularBarrier -left-|> Barrier
+
+@enduml

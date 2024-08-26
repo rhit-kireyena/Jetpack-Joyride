@@ -1,0 +1,8 @@
+Time: 7:30pm- 
+Present: All
+Agenda:
+-finalize code
+-finalize milestone report
+
+Discussed:
+-track speed and point missile in the direction of rotation

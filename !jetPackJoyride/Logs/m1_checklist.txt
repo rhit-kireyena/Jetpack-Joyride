@@ -1,0 +1,14 @@
+InvalidFileException
+-Figure out how to implement (+ update checklist)
+- implement
+Barrier
+*Electric Barrier
+- create it
+*Basic Barrier
+Level
+-load file
+-throw invalid file exception
+-handle invalid file exception
+-handle IO exceptions
+
+refactoring of Non player objects to all inherit for a method that allows moving to the left

@@ -1,0 +1,7 @@
+Time: February 6, 2:00pm-3:00pm
+Present: All
+Current State of the project:
+gravity not yet
+missile exists & displays but not working
+
+-missile goes faster than then the rest. Future improvement could make it wait until the player is a certain distance away before speeding

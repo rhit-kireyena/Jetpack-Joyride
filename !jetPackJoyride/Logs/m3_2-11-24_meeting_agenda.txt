@@ -1,0 +1,10 @@
+Time: 2/11/2024 7:00pm-
+Agenda:
+-what changes have occured since last meeting
+-any necessary changes to the UML
+-check on progress on last meetings tasks
+-discuss plans for milestone 4
+-finish milestone report
+
+*missiles now holds a hero
+*refactoring has occured for the arraylists in Level

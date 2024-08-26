@@ -1,0 +1,3 @@
+make Level hold a list of NonPlayerObjects
+collision handled by each class itself
+missle ALWAYS targets player

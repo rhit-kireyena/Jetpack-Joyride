@@ -1,0 +1,5 @@
+fix repo
+LevelsManager should be GameManager
+Barrier should be abstract class, RegBarrier and ElecBarrier should inherit
+move to PlantUML
+add restart if possible

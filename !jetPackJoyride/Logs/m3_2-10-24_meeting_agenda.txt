@@ -1,0 +1,19 @@
+Time: 2/10/24 2:00pm-
+agenda:
+-discuss progress on the project
+-any changes that need to be updated in the UML?
+-future plans that have changed?
+-how is health formatted (looking through the code i am wondering if i am on a different page about our plans)
+-what is sudoMissiles (that name might need to be changed, not super intuitive)
+-update() code in Level for missile removal should for sure be changed (i.e. it should not create a new ArrayList every single loop)
+-fairly sure sudoMissiles should not exist
+-double check some of the collision calculations
+
+-proposed changes to design:
+*collidesWith(Hero) returns true if the object should be deleted, otherwise it returns false
+*replace all the nonplayerobject arrays with one, delete if true
+
+
+UML changes:
+-Hero no more dependency on MainApp
+-there is a new class that draws the game over screen
